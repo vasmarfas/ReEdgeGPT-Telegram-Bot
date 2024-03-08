@@ -21,8 +21,8 @@ import database as db
 
 import edge_tts
 
-from EdgeGPT.EdgeGPT import Chatbot
-from EdgeGPT.request import ChatHubRequest
+from re_edge_gpt import Chatbot
+from re_edge_gpt.chat.request import ChatHubRequest
 
 from telegram import (
     constants,

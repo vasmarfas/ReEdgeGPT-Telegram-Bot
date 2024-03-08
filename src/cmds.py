@@ -16,8 +16,8 @@ import backend
 
 import database as db
 import utils as ut
-from EdgeGPT.EdgeGPT import ConversationStyle
-from EdgeGPT.ImageGen import ImageGenAsync
+from re_edge_gpt import ConversationStyle
+from re_edge_gpt import ImageGenAsync
 
 from telegram import (
     constants,

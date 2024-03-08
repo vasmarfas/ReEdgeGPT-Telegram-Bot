@@ -305,7 +305,9 @@ if __name__ == "__main__":
                 "httpx",
             ]
         )
-
+    etstpath = ut.Path(ut.PATH["dir"]).joinpath(ut.PATH["config"])
+    etsa = ut.Path(ut.PATH["dir"])
+    isexetistas = etstpath.exists()
     if ut.Path(ut.PATH["dir"]).joinpath(ut.PATH["config"]).exists():
         ut.setup()
         application = (

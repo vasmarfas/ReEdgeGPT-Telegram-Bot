@@ -1,0 +1,26 @@
+{
+  "settings": {
+    "token": "bot_token",
+    "webhook": false,
+    "log_level": "INFO",
+    "ip": "vps_ip",
+    "listen": "0.0.0.0",
+    "port": "vps_port",
+    "cert": "cert_path"
+  },
+  "apis": {
+    "openai": "openai_token",
+    "assemblyai": "assemblyai_token"
+  },
+  "chats": {
+    "password": "password_to_enable_bot",
+    "id": ["list", "of", "allowed", "telegram", "ids"],
+    "admin": ["list", "of", "admin", "telegram", "ids"],
+    "remove_chats_on_stop": false,
+    "history": true
+  },
+  "cookies": [
+    "config/cookies.json",
+    "config/cookies2.json"
+  ]
+}

@@ -23,7 +23,7 @@ import edge_tts
 import openai
 import utils as ut
 from aiohttp.web import HTTPException
-from EdgeGPT.EdgeGPT import ConversationStyle
+from re_edge_gpt import ConversationStyle
 from telegram import constants, InputMediaPhoto, Update
 from telegram.constants import ParseMode
 from telegram.ext import ContextTypes
