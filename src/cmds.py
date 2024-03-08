@@ -10,7 +10,11 @@ import json
 import logging
 import os
 import sys
+import time
+from pathlib import Path
 from uuid import uuid4
+
+import requests
 
 import backend
 
@@ -715,6 +719,9 @@ async def send_media(
             ) as iga:
                 try:
                     images = await iga.get_images(prompt)
+                    for imgpath in images:
+                        if ".svg" in str(imgpath):
+                            images.remove(imgpath)
                 except Exception as e:  # noqa
                     msg = e.args[0]
                     logging.getLogger("BingImageCreator").error(msg)
