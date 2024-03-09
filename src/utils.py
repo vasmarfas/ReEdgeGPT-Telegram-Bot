@@ -247,8 +247,6 @@ def passwd_correct(passwd: str) -> bool:
 
 
 def whitelisted(_cid: int) -> bool:
-    return (_cid in chats("id"))
-
     if chats("whitelistenabled") == 1:
         print(f"ttt-{_cid in chats('id')}")
         return (_cid in chats("id"))
