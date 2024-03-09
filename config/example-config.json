@@ -17,7 +17,8 @@
     "id": ["list", "of", "allowed", "telegram", "ids"],
     "admin": ["list", "of", "admin", "telegram", "ids"],
     "remove_chats_on_stop": false,
-    "history": true
+    "history": true,
+    "whitelistenabled": true
   },
   "cookies": [
     "config/cookies.json",
