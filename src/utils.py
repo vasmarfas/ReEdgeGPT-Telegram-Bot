@@ -247,10 +247,10 @@ def passwd_correct(passwd: str) -> bool:
 
 
 def whitelisted(_cid: int) -> bool:
-    if chats("whitelistenabled"):
-        return _cid in chats("id")
-    else:
+    if not chats("whitelistenabled"):
         return True
+    else:
+        return _cid in chats("id")
 
 
 def add_whitelisted(_cid: int) -> None:
