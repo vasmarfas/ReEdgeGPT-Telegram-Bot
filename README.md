@@ -1,8 +1,8 @@
-# Project archived to due so many errors on EdgeGPT (archived) that won't be fixed
 # Description
-Telegram bot using [EdgeGPT](https://github.com/acheong08/EdgeGPT)
+Telegram bot using [ReEdgeGPT](https://github.com/Integration-Automation/ReEdgeGPT)
 unofficial API
 
+You can check it here -> [ReEdgeBot](https://t.me/ReEdgeBot)
 ### What can I do?
 - Access to Bing Chat without leaving your lovely messaging app!
 - Change Bing Chat conversation styles
