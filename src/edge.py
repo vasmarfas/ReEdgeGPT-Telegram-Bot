@@ -306,11 +306,6 @@ if __name__ == "__main__":
                 "httpx",
             ]
         )
-    test = ut.Path(ut.PATH["dir"]).joinpath(ut.PATH["config"])
-    test2 = test.exists()
-    test0 = os.path.join((ut.PATH["dir"]), (ut.PATH["config"]))
-    test3 = os.path.exists(test0)
-
     if ut.Path(ut.PATH["dir"]).joinpath(ut.PATH["config"]).exists():
         ut.setup()
         application = (
@@ -345,38 +340,6 @@ if __name__ == "__main__":
                 f"in {ut.PATH['config']}. Check README for more info."
             )
 
-    elif ut.Path("config\\").exists():
-        ut.setup()
-        application = (
-            ApplicationBuilder()
-            .token(ut.settings("token"))
-            .post_init(setup_commands)
-            .post_shutdown(shutdown)
-            .concurrent_updates(True)
-            .build()
-        )
-        setup_handlers(application)
-        try:
-            if ut.settings("webhook"):
-                application.run_webhook(
-                    listen=ut.settings("listen"),
-                    port=int(ut.settings("port")),
-                    url_path=ut.settings("token"),
-                    cert=ut.settings("cert"),
-                    webhook_url=(
-                        f"https://{ut.settings('ip')}/{ut.settings('token')}"
-                    ),
-                )
-            else:
-                application.run_polling()
-        except TimedOut:
-            logging.getLogger("telegram.ext._application").error(
-                "Bot could not be initialized. Try again later."
-            )
-        except KeyError:
-            logging.error(
-                "New 'webhook' setting required "
-                f"in {ut.PATH['config']}. Check README for more info."
-            )
+
     else:
         logging.error(f"{ut.PATH['config']} file missing.")
